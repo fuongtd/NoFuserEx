@@ -9,9 +9,9 @@ install:
 - cmd: git submodule update --init --recursive
 build_script:
 - cmd: >-
-    appveyor-retry nuget restore dnlib.sln
+    appveyor-retry nuget restore NoFuserEx/NoFuserEx.sln
     
-    msbuild dnlib.sln /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+    msbuild NoFuserEx/NoFuserEx.sln /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 artifacts:
 - path: Release/
   name: dnlib
