@@ -10,6 +10,7 @@ install:
 build_script:
 - cmd: >-
     appveyor-retry nuget restore dnlib.sln
+    
     msbuild dnlib.sln /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 artifacts:
 - path: Release/
